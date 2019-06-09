@@ -16,7 +16,7 @@ print """
 nick = raw_input("\033[91mNick Kamu: \033[0m")
 liat = raw_input("\033[91mList Website: \033[0m")
 def cek(nik, web):
-	req = requests.post("https://mirror-h.org/site-send", {'user': 'Gambrush', 'url': web}).status_code
+	req = requests.post("https://mirror-h.org/site-send", {'user': nik, 'url': web}).status_code
 	if req == 200:
 		print "\033[92m[\033[93m+\033[92m] Sukses: \033[0m"+web+""
 	else:		
